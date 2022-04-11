@@ -13,6 +13,6 @@ jobs:
       run: echo "my enviroment is ${{secrets.PERCY_TOKEN}}"
 
     - name: Percy
-      run: npx percy snapshot _site
+      run: npx percy snapshot ./
       env:
         PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
