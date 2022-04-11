@@ -1,13 +1,13 @@
 name: percy-test
-on: [push]
+on: push
+
 jobs:
-  test:
+  VISUAL_TESTING:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/setup-node@v1
-        name: install
-        run: npm ci |
-        npx percy -v |
-        npx percy snapshot _site |
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+    - uses: actions/checkout@v1
+    - name: Percy
+      run: npx percy snapshot _site
+      env:
+        PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
