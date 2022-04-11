@@ -10,4 +10,4 @@ jobs:
     - name: Percy
       run: npx percy snapshot _site
       env:
-        PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
+        PERCY_TOKEN: ${{PERCY.PERCY_TOKEN}}
