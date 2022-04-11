@@ -5,16 +5,16 @@ on:
       - main
       - '*'
 
-  jobs:
-    percy-test:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/setup-node@v1
-          with:
-            - node-version: 16
-          name: install
-          run: npm ci
-          run: npx percy -v
-          run: npx percy snapshot _site
-          env:
-            PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+jobs:
+  percy-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          - node-version: 16
+        name: install
+        run: npm ci
+        run: npx percy -v
+        run: npx percy snapshot _site
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
