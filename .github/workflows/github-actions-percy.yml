@@ -10,7 +10,6 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Enviroments
-      run: echo "my enviroment is ${{secrets.PERCY_TOKEN}}"
 
     - name: Percy
       run: npx percy snapshot ./
