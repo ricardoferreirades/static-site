@@ -9,8 +9,7 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Enviroments
-      run: |
-      echo "my enviroment is ${{secrets}}"
+      run: echo "my enviroment is ${{secrets}}"
 
     - name: Percy
       run: npx percy snapshot _site
