@@ -4,6 +4,7 @@ on: push
 jobs:
   VISUAL_TESTING:
     runs-on: ubuntu-latest
+    environment: PERCY
 
     steps:
     - uses: actions/checkout@v1
