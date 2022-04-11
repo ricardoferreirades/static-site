@@ -6,8 +6,8 @@ jobs:
     steps:
       - uses: actions/setup-node@v1
         name: install
-        run: npm ci
-        npx percy -v
-        npx percy snapshot _site
+        run: npm ci |
+        npx percy -v |
+        npx percy snapshot _site |
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
