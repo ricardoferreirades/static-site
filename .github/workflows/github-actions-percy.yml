@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: NPM install
+    - run: npm install
     - name: Percy
       run: npm run percy:snapshots
       env:
