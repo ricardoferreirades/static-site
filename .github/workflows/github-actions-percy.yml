@@ -1,5 +1,9 @@
 name: percy-test
-on: push
+on:
+  push:
+    branches:
+      - main
+      - '*'
 
 jobs:
   VISUAL_TESTING:
@@ -8,7 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: NPM install
+      run: npm install
     - name: Percy
-      run: npx percy snapshot ./
+      run: npm run percy:snapshots
       env:
         PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}

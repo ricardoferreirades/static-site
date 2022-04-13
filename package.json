@@ -1,0 +1,24 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "percy:snapshots": "npx percy exec -- node snapshots.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardoferreirades/static-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardoferreirades/static-site/issues"
+  },
+  "homepage": "https://github.com/ricardoferreirades/static-site#readme",
+  "devDependencies": {
+    "@percy/agent": "^0.28.7",
+    "@percy/script": "^1.1.0"
+  }
+}
