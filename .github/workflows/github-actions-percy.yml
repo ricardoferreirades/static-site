@@ -15,6 +15,6 @@ jobs:
     - name: Percy Test
       uses: percy/snapshot-action@v0.1.2
     - name: Percy
-      run: npx percy snapshot snapshots.yml
+      run: npx percy snapshot ./snapshots.yml
       env:
         PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
