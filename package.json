@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "percy:snaphots": "npx percy exec -- node snapshots.js"
+    "percy:snapshots": "npx percy exec -- node snapshots.js"
   },
   "repository": {
     "type": "git",
